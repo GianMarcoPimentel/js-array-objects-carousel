@@ -53,4 +53,16 @@
     height: 100%;
     color: white;
     font-size: 2em;
+   
+}
+/* frecce in hover */
+#slider #arrows > * {
+    transform: scale(1);
+
+    transition: transform 0.2s ease ;
+}
+#slider #arrows > *:hover {
+    cursor: pointer;
+
+    transform: scale(1.1);
 }
