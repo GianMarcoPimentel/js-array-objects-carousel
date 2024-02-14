@@ -11,13 +11,46 @@
     
     margin : 0 auto;
 
+    margin-top: 200px;
+   
 }
 
 /* Stilizzazione slider*/
 #slider{
-    height: 400px;
+    /* deve vedersi sotto le frecce */
+    position: relative;
+
+    height: 450px;
+    border: 1px black solid;
+    border-radius : 20px;
+    /* per non far fuoriuscire l'immagine uso */
+    overflow: hidden;
+
 }
 /* ridimensionamento immagine */
-img{
+#slider img{
+    
+    width: 100%;
     height: 100%;
+    /* per visualizzare meglio l'immagine e che quindi non sia stretchata */
+    object-fit: cover;
+    /* cover = ricopre l'intero spazio, la estende per tutto il contenuto */
+   
+}
+
+#slider #arrows{
+    /* freccie a destra e a sinistra */
+   display: flex;
+   justify-content: space-between;
+   padding: 0 20px;
+
+    /* devo far si che si vedano sopra l'immagine */
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 2em;
 }
