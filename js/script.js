@@ -81,3 +81,59 @@ const images = [
 ];
 console.log(images);
 
+//bersaglio lo slider
+
+const sliderElement = document.getElementById("slider");
+console.log(sliderElement);
+
+// tramite un ciclo for prendiamo ogni indirizzo delle immagini dall'array
+for (let i = 0; i < images.length; i++) {
+    console.log(images[i].image)
+    sliderElement.innerHTML += `<img src="./img/0${i + 1}.webp" alt="immagine ${i + 1}">`;
+
+    // per ognuno di essi andremo a creare un elemento img dentro lo slider
+
+}
+// devo dare la classe active a quelle che voglio visualizzare
+document.querySelector("#slider img:nth-of-type(1)").className = "active";
+
+// devo inizilizzare poi un contatore
+//per poter cambiare la classe active e quidni visualizzare altre immagini
+//tutio ciò al click delle frecce
+//   - prendo l'immagine attuale e le rimuovo la classe "active"  
+//   - aumento il contatore di 1
+//   - prendo l'immagine con il nuovo contatore e le aggiungo la classe "active"
+
+// memorizzo la variabile del conttore
+let slideNumber = 1; //uguale alla prima immagine
+
+//al click
+document.querySelector("#left-arrows").addEventListener("click", function(){
+
+    if(slideNumber < images.length){
+        // - prendo l'immagine attuale e le rimuovo la classe "active"  
+        document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.remove("active");
+
+        // - aumento il contatore di 1
+        slideNumber++;
+
+        // - prendo l'immagine con il nuovo contatore e le aggiungo la classe "active"
+        document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.add("active");
+
+        console.log(slideNumber);
+
+    } else {
+
+        // - prendo l'immagine attuale e le rimuovo la classe "active"  
+        document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.remove("active");
+
+        // resetto la variabile che mi conta l'immagine a cui sono arrivato
+        slideNumber = 1;
+
+        // - prendo l'immagine con il nuovo contatore e le aggiungo la classe "active"
+        document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.add("active");
+
+    }
+    
+
+});

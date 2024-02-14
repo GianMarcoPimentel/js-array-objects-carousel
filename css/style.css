@@ -37,7 +37,10 @@
     /* cover = ricopre l'intero spazio, la estende per tutto il contenuto */
    
 }
-
+/* rendo visibile solo la prima img  */
+#slider img:not(.active){
+    display: none;
+}
 #slider #arrows{
     /* freccie a destra e a sinistra */
    display: flex;
