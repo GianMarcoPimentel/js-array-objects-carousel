@@ -29,7 +29,7 @@ BONUS 3:
 Aggiungere bottoni di start / stop e di inversione del meccanismo di autoplay.
 
 
-// Array di riferimento:
+// Array di riferimento:   
         const images = [
             {
                 image: 'img/01.webp',
@@ -80,3 +80,4 @@ const images = [
     }
 ];
 console.log(images);
+
