@@ -20,7 +20,7 @@
     /* deve vedersi sotto le frecce */
     position: relative;
 
-    height: 450px;
+    height: 400px;
     border: 1px black solid;
     border-radius : 20px;
     /* per non far fuoriuscire l'immagine uso */
@@ -40,6 +40,14 @@
 /* rendo visibile solo la prima img  */
 #slider img:not(.active){
     display: none;
+}
+.txt_image{
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    z-index: 9;
+    text-align: center;
 }
 #slider #arrows{
     /* freccie a destra e a sinistra */

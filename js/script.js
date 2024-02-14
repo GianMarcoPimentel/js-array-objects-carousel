@@ -89,8 +89,8 @@ console.log(sliderElement);
 // tramite un ciclo for prendiamo ogni indirizzo delle immagini dall'array
 for (let i = 0; i < images.length; i++) {
     console.log(images[i].image)
-    sliderElement.innerHTML += `<img src="./img/0${i + 1}.webp" alt="immagine ${i + 1}">`;
-
+    sliderElement.innerHTML += `<img src="./img/0${i + 1}.webp" alt="immagine ${i + 1}">` /* <div class="txt_image">${images[0].title}</div>" */;
+    
     // per ognuno di essi andremo a creare un elemento img dentro lo slider
 
 }
