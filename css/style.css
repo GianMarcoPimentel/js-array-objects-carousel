@@ -27,6 +27,25 @@
     overflow: hidden;
 
 }
+/* stilizzazione slide */
+#slider .slide{
+    height: 100%;
+    position: relative;
+}
+/* rendo visibile solo la prima img  */
+#slider .slide:not(.active){
+    display: none;
+}
+
+#slider .slide .details{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: white;
+    text-align: right;
+    padding: 30px 10px;
+  
+}
 /* ridimensionamento immagine */
 #slider img{
     
@@ -37,10 +56,7 @@
     /* cover = ricopre l'intero spazio, la estende per tutto il contenuto */
    
 }
-/* rendo visibile solo la prima img  */
-#slider img:not(.active){
-    display: none;
-}
+/* 
 .txt_image{
     color: white;
     position: absolute;
@@ -48,7 +64,7 @@
     width: 100%;
     z-index: 9;
     text-align: center;
-}
+} */
 #slider #arrows{
     /* freccie a destra e a sinistra */
    display: flex;
@@ -56,10 +72,11 @@
    padding: 0 20px;
 
     /* devo far si che si vedano sopra l'immagine */
-
     position: absolute;
     top: 50%;
     left: 0;
+    z-index: 1;
+
     width: 100%;
     height: 100%;
     color: white;
